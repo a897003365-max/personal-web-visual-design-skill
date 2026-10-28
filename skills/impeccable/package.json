@@ -1,0 +1,13 @@
+{
+  "name": "mds-impeccable-static-runtime",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pinned HTML/CSS parser dependencies for the bundled Impeccable detector",
+  "dependencies": {
+    "htmlparser2": "12.0.0",
+    "css-select": "7.0.0",
+    "css-tree": "3.2.1",
+    "domutils": "4.0.2"
+  }
+}

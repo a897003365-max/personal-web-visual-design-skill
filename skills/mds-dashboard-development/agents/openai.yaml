@@ -1,0 +1,4 @@
+interface:
+  display_name: "MDS 数据看板开发"
+  short_description: "按已确认的电商看板规范完成数据口径、视觉交互、实现和验收"
+  default_prompt: "使用 $mds-dashboard-development，按已确认规范处理当前数据看板任务，并说明实际验证结果。"
