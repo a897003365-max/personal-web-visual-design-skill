@@ -1,7 +1,7 @@
 {
   "format": 1,
   "package": "mds-dashboard-development-skill",
-  "package_version": "2026.10.28.1",
+  "package_version": "2026.10.28.2",
   "packaged_on": "2026-10-28",
   "entry_skill": "mds-dashboard-development",
   "repository_owner": "a897003365-max",
@@ -15,12 +15,12 @@
     {
       "kind": "document",
       "path": "docs/dashboard-development-standards.md",
-      "sha256": "3876cdcacb8cb8227e8a68d930647a82ec8dda8e55e6375e66800fbe94d48156"
+      "sha256": "1d5b47c2f733f26c5b5d135da18ef9991d76ccc335580fe95653910a6bf73768"
     },
     {
       "kind": "document",
       "path": "docs/development-workflow.md",
-      "sha256": "30fffe91d6c199939318a8e97cb6999c39b6d6c9a8f56a5217c57533d453a5b2"
+      "sha256": "b43d302c4653fa0ad493c0cd6a632ef0b81a23232ab5fa9d57e528c8fc8247dd"
     },
     {
       "kind": "document",
@@ -1296,12 +1296,12 @@
     "skills/mds-dashboard-development/assets/typography-preview.html": "a1a671d5f50b5278195e34b8ea2cdf80404648e17ca8d150f033d3dc21bb28be",
     "skills/mds-dashboard-development/licenses/impeccable-LICENSE.txt": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
     "skills/mds-dashboard-development/references/assets.md": "c45ad336c59c6f54bce66511a0a0e1be975e10cd808143774b149029f920a3ed",
-    "skills/mds-dashboard-development/references/dashboard-development-standards.md": "65e24f209499eb9d82ccde349958c628b20dad02b4fd3f0b5c61d763dc42c5fe",
+    "skills/mds-dashboard-development/references/dashboard-development-standards.md": "c675efa9432a28325002459245b5930b814fadfa26c18010b01c2bc308c8f68b",
     "skills/mds-dashboard-development/references/database/dashboard-live-events.md": "e181795e112ab685807b10d4eaa08e39df4ff164447de8b4ab5495e91b0f9b5c",
     "skills/mds-dashboard-development/references/dependencies.md": "f3f3f76d8627f009bb580cd64d4427861da2ea4d103767395616f052a5f59735",
-    "skills/mds-dashboard-development/references/development-workflow.md": "1ce516766056d9c3ac84ed78e14de014da6d1edf527f717c85a8ffca80490c3d",
+    "skills/mds-dashboard-development/references/development-workflow.md": "811cca7513bcee99fca26ba342059b5e55557137192d495c0cad0844fe688f7f",
     "skills/mds-dashboard-development/references/project-context.md": "d242d3cfbaa2b738cc14af8ab86fcdc109f3a3bcd3e4fa7f60588d1015bd7620",
-    "skills/mds-dashboard-development/SKILL.md": "05bea7bff5d442ad3c32dfbf1d7bf2017abd9997f0c1121d2361a10b588391ca",
+    "skills/mds-dashboard-development/SKILL.md": "3123596b89b261e68aee34190222bae519e7da3f2ec42bbb1b9ab5863e9aeaa0",
     "THIRD_PARTY_NOTICES.md": "cbf7172644c1839b6c939c6b7874762ab0d0c6adecec1988e4a950493c4b3d4b"
   }
 }

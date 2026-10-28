@@ -18,6 +18,7 @@
 
 - [ ] 实现限于已明确范围，复用现有组件、配色与字段定义；局部样式不波及其他看板。
 - [ ] 按涉及内容检查表格、SKU／灯箱、图表／图例／浮窗、配置、加载与更新逻辑。入口：[表格](dashboard-development-standards.md#rule-10)、[图表](dashboard-development-standards.md#rule-14)、[配置](dashboard-development-standards.md#rule-17)、[加载](dashboard-development-standards.md#rule-18)。
+- [ ] 生产、交付的数据图表默认附带数据标签，标签与数据及图例显隐同步；密集时调整布局和标签位置。入口：[必显数据标签](dashboard-development-standards.md#rule-26)。
 - [ ] 检查动效、键盘操作、导航壳与窄屏，保持页面及接口权限边界。入口：[动效](dashboard-development-standards.md#rule-20)、[适配](dashboard-development-standards.md#rule-21)、[权限](dashboard-development-standards.md#rule-22)。
 - [ ] 注释只解释重点逻辑和必要信息；关键缺失状态就近简短显示，详细口径按需查看。入口：[注释规范](dashboard-development-standards.md#rule-25)。
 
@@ -27,6 +28,7 @@
 - [ ] 使用官方来源或独立只读查询核对数据，覆盖相关的缺失、零、负值、零分母、部分覆盖、日期对齐、官方区间人数及 `10000` 换算边界。
 - [ ] 验证首次近 7 天、快速切换、排序分页、展开与灯箱、图例全部隐藏与恢复、浮窗边缘与长内容、配置确定／取消／恢复默认、刷新及失败状态中的受影响路径，并核对真实字体加载。
 - [ ] 在独立页面与主站导航容器内检查至少 1440px、1024px、390px；长名称、大数值、空态、表格留白、冻结交叉层级、浮层裁切按变更范围验证。
+- [ ] 在不悬停的默认状态检查图表数据标签，并核对数值、单位、精度、显隐联动和桌面／窄屏下的遮挡、重叠与裁切。
 - [ ] 分开记录静态检查、合成数据、真实来源核对、浏览器模拟和真机结果；结果绑定实际提交或文件快照。入口：[验收标准](dashboard-development-standards.md#rule-23)。
 
 ### Review / Fix：独立审查并修复

@@ -28,13 +28,14 @@ description: "按用户确认的 MDS 中文电商数据看板规范开发、改�
 - 调色或视觉实现：读取[Impeccable](../impeccable/SKILL.md)和其 [colorize](../impeccable/reference/colorize.md)、[Operate 模式](../impeccable/reference/operate.md)。字体工作再读 [typeset](../impeccable/reference/typeset.md)；其他流程仅按当前任务需要加载。
 - 页面注释、口径提示和交付说明：读取[anti-defensive-writing](../anti-defensive-writing/SKILL.md)，保持业务语言直接、说明克制。
 - 优先使用包内已固定的依赖版本。执行 Impeccable 时，以实际同级 `impeccable/` 目录作为其 skill base，命令保持在目标项目工作目录运行；不要照抄某台机器的绝对路径。
-- 用户已确认的 Radix 语义色、Noto Sans SC／Barlow Semi Condensed 字体及具体版式优先于依赖技能的通用审美建议。只读或文档任务不启动 UI 实现、初始化项目或安装钩子。
+- 用户已确认的 Radix 语义色、Noto Sans SC／Barlow Semi Condensed 字体、具体版式及必显数据标签要求优先于依赖技能的通用审美建议。只读或文档任务不启动 UI 实现、初始化项目或安装钩子。
 
 ## 视觉与交互
 
 - Radix Colors 提供色板；Teal 改善、Tomato 恶化、Amber 待关注、Slate 中性。调色通过语义变量实现，图表系列色与变化状态色分工明确。
 - 字体从包内 Fontsource 资产自托管；按需要加载字重和中文分片。入口与示例见[视觉资产](references/assets.md)，不是对现有页面的自动覆盖脚本。
 - 表格、冻结列、排序分页、SKU、灯箱、图例显隐、浮窗、指标配置及过期响应保护按规范正文逐项落实。
+- 生产、交付的数据图表必须默认附带数据标签，悬浮提示只作补充；标签格式、密集布局与显隐联动遵循[数据标签规则](references/dashboard-development-standards.md#rule-26)。
 - 占比图先验证分母及可加性，再按分项数选择圆饼图或南丁格尔玫瑰图；玫瑰图用面积表达真实比例。
 - 说明文字只解释重点逻辑或必要信息；关键缺失状态直接简短显示，详细口径按需展开。
 
