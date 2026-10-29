@@ -15,26 +15,26 @@
 @import url('./fonts/barlow-semi-condensed/600.css');
 @import url('./fonts/barlow-semi-condensed/700.css');
 
-[data-mds-dashboard] {
-  --mds-font-text: 'Noto Sans SC Variable', sans-serif;
-  --mds-font-number: 'Barlow Semi Condensed', 'Noto Sans SC Variable', sans-serif;
-  --mds-text: var(--slate-12);
-  --mds-muted: var(--slate-11);
-  --mds-surface: var(--slate-1);
-  --mds-border: var(--slate-6);
-  --mds-improvement: var(--teal-11);
-  --mds-deterioration: var(--tomato-11);
-  --mds-attention: var(--amber-11);
-  --mds-neutral: var(--slate-11);
-  --mds-emphasis-bg: var(--teal-3);
-  --mds-emphasis-text: var(--teal-12);
-  --mds-number-main-size: 46px;
-  --mds-number-secondary-size: 36px;
-  --mds-table-edge: 16px;
-  font-family: var(--mds-font-text);
-  color: var(--mds-text);
+[data-personal-web] {
+  --pw-font-text: 'Noto Sans SC Variable', sans-serif;
+  --pw-font-number: 'Barlow Semi Condensed', 'Noto Sans SC Variable', sans-serif;
+  --pw-text: var(--slate-12);
+  --pw-muted: var(--slate-11);
+  --pw-surface: var(--slate-1);
+  --pw-border: var(--slate-6);
+  --pw-improvement: var(--teal-11);
+  --pw-deterioration: var(--tomato-11);
+  --pw-attention: var(--amber-11);
+  --pw-neutral: var(--slate-11);
+  --pw-emphasis-bg: var(--teal-3);
+  --pw-emphasis-text: var(--teal-12);
+  --pw-number-main-size: 46px;
+  --pw-number-secondary-size: 36px;
+  --pw-table-edge: 16px;
+  font-family: var(--pw-font-text);
+  color: var(--pw-text);
 }
-[data-mds-dashboard] [data-mds-number] {
-  font-family: var(--mds-font-number);
+[data-personal-web] [data-personal-number] {
+  font-family: var(--pw-font-number);
   font-variant-numeric: tabular-nums lining-nums;
 }

@@ -7,7 +7,7 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-MAIN = ROOT/'skills/mds-dashboard-development'
+MAIN = ROOT/'skills/personal-web-visual-design'
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -46,9 +46,14 @@ def main():
         front = re.match(r'^---\s*\n(.*?)\n---', text, re.S)
         if not front or not re.search(r'^name:\s*'+re.escape(skill.name)+r'\s*$', front[1], re.M) or not re.search(r'^description:', front[1], re.M):
             failures.append(f'Invalid skill frontmatter: {skill.name}')
-    docs = [MAIN/'SKILL.md', *sorted((MAIN/'references').rglob('*.md'))]
+    docs = [ROOT/'README.md', ROOT/'THIRD_PARTY_NOTICES.md', MAIN/'SKILL.md', *sorted((MAIN/'references').rglob('*.md'))]
+    anchors = {}
     for doc in docs:
         text = doc.read_text(encoding='utf-8-sig')
+        ids = re.findall(r'<a id="([^"]+)"', text)
+        if len(ids) != len(set(ids)):
+            failures.append(f'Duplicate anchor in {doc.name}')
+        anchors[doc.relative_to(ROOT).as_posix()] = ids
         for link in re.findall(r'(?<!!)\[[^\]]+\]\(([^)]+)\)', text):
             if re.match(r'^[a-zA-Z]+://', link):
                 continue
@@ -68,13 +73,19 @@ def main():
             rel = ref.strip(' \"\'')
             if re.match(r'^[a-zA-Z]+:', rel) or not (css.parent/rel).resolve().is_file():
                 failures.append(f'Nonlocal or missing CSS asset: {css.name}: {rel}')
-    standard = (MAIN/'references/dashboard-development-standards.md').read_text(encoding='utf-8')
-    ids = [int(v) for v in re.findall(r'^## (\d+)\.', standard, re.M)]
-    if not ids or ids != list(range(1, max(ids)+1)):
-        failures.append('Rule IDs are missing or duplicated')
+    preview = assets/'typography-preview.html'
+    for ref in re.findall(r'(?:href|src)="([^"]+)"', preview.read_text(encoding='utf-8')):
+        if re.match(r'^[a-zA-Z]+:', ref) or not (preview.parent/ref).resolve().is_file():
+            failures.append(f'Nonlocal or missing preview asset: {ref}')
+    for name in ('web-visual-standards.md', 'data-display.md'):
+        if not anchors.get(f'skills/{MAIN.name}/references/{name}'):
+            failures.append(f'Missing standard anchors: {name}')
+    actual_skills = sorted(p.name for p in (ROOT/'skills').iterdir() if p.is_dir() and (p/'SKILL.md').is_file())
+    if manifest['entry_skill'] != MAIN.name or sorted(manifest['skills']) != actual_skills:
+        failures.append('Manifest skill identities differ from package contents')
     if 'TODO:' in (MAIN/'SKILL.md').read_text(encoding='utf-8'):
         failures.append('Unfinished primary skill scaffold')
-    print(json.dumps({'status':'passed' if not failures else 'failed','files_checked':len(manifest['files']),'rule_ids':ids,'failures':failures}, ensure_ascii=False, indent=2))
+    print(json.dumps({'status':'passed' if not failures else 'failed','files_checked':len(manifest['files']),'entry_skill':MAIN.name,'anchors_checked':sum(map(len, anchors.values())),'failures':failures}, ensure_ascii=False, indent=2))
     return 1 if failures else 0
 
 if __name__ == '__main__':

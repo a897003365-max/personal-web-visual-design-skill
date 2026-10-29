@@ -1,19 +1,18 @@
-# MDS 数据看板开发技能包
+# 个人网页视觉设计技能包
 
-将用户确认的 MDS 中文电商数据看板规范打包为一个主技能入口，并附带所需技能和自托管视觉资源。规范持续追加，不固定条款总数。
+一个可跨项目使用的个人网页视觉规范入口，适用于官网、产品界面、内容页、作品展示和数据页面。默认方向是中文清晰、标题有分量、重点醒目、信息紧凑而有留白；页面结构随目标与内容调整。
 
 ## 内容
 
-- `skills/mds-dashboard-development/`：主技能、完整规范、开发清单、MDS 更新契约及视觉资产。
-- `skills/impeccable/`：当前使用的 Impeccable 4.1.2 快照，包含参考文档、脚本，以及静态 HTML/CSS 检查需要的固定解析依赖。
-- `skills/anti-defensive-writing/`：用户本地文案技能，负责说明文字与交付表达。
-- Radix Colors 3.0.0 六组亮／暗色板；Noto Sans SC、Barlow Semi Condensed 字体及许可证。
-- `scripts/install.py`：本地安装；已有不同版本会明确停止，不覆盖。
-- `scripts/validate_package.py`：文件指纹、引用、资产及基本技能结构校验。
+- `skills/personal-web-visual-design/`：主技能、网页视觉规范、按需使用的数据展示规范、验收清单和视觉资产。
+- `skills/impeccable/`：Impeccable 4.1.2 快照、参考文档、脚本和固定版本的 HTML/CSS 静态解析依赖。
+- `skills/anti-defensive-writing/`：页面说明和交付表达技能。
+- Radix Colors 3.0.0 色板，Noto Sans SC 与 Barlow Semi Condensed 字体及许可证。
+- `scripts/install.py` 与 `scripts/validate_package.py`：离线安装、文件摘要、引用及资源校验。
 
-Radix Colors 和 Fontsource 是资源来源，实际调色技能是 Impeccable。第三方来源见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+Radix Colors 和 Fontsource 是资源来源，调色实施技能是 Impeccable。来源与许可见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
-## 使用
+## 安装与使用
 
 在仓库根目录运行（Python 3.10+）：
 
@@ -22,32 +21,41 @@ python scripts/validate_package.py
 python scripts/install.py
 ```
 
-默认安装到 `CODEX_HOME/skills`，未设置 CODEX_HOME 时使用当前用户的 `.codex/skills`。也可显式选择其他平台的技能发现目录：
+默认安装到 `CODEX_HOME/skills`；未设置时使用当前用户的 `.codex/skills`。其他平台可显式指定其技能发现目录：
 
 ```text
 python scripts/install.py --target /path/to/agent/skills
 ```
 
-安装会先检查全部目标；已有相同内容直接复用，主体一致但缺少文件时只补齐缺失文件，内容冲突则停止并指出目录。程序没有覆盖、删除、下载或自动发布步骤。执行 Impeccable 脚本仍需本机提供 Node.js；所附静态解析库要求 Node.js 20.19.0 或更新，已包含在包中。浏览器等外部工具按实际任务能力使用。
+安装先检查全部目标；相同文件复用，只补齐缺失文件，发现内容冲突即停止。安装器不覆盖现有版本。Impeccable 静态解析脚本需要 Node.js 20.19.0 或更新，解析依赖已在包内。浏览器能力由当前环境提供。
 
-安装完成后，在支持技能发现的下一轮会话中使用：
-
-```text
-使用 $mds-dashboard-development 检查当前天猫看板，只读列出与规范的差异。
-```
-
-或：
+安装后在下一轮支持技能发现的会话中使用：
 
 ```text
-使用 $mds-dashboard-development 改进当前看板的表格、图例和图片灯箱，按项目流程验证。
+使用 $personal-web-visual-design 设计当前产品官网，沿用我的配色、字体和留白规范。
 ```
 
-主技能保留自动发现；实现、审查、规范编辑和发布的权限由当前用户请求及目标项目规则决定。调用技能不代表授权生产部署或数据写入。
+```text
+使用 $personal-web-visual-design 只读检查这个页面的视觉层级与窄屏体验。
+```
+
+```text
+使用 $personal-web-visual-design 改进当前数据页面，落实表格留白、灯箱、图例显隐和默认数据标签。
+```
+
+主技能保留自动发现。一般网页读取视觉规范；页面含表格、指标或图表时才使用相应的数据展示要求。
 
 ## 维护
 
-MDS 本地规范仍为规则主版本。用户确认新增条款后，更新包内规范快照、相关入口、开发清单与文件清单；已有编号保持稳定。规范正文中的项目入口已改为包内项目上下文，其余条款原样保留。
+规范主版本位于本仓库 `skills/personal-web-visual-design/references/`。新增偏好经确认后更新对应主题、稳定锚点和验收清单，不固定条目总数，也不依赖某个业务项目的本地文档。
 
-本仓库是用户于 2026-10-28 明确授权创建的个人私有技能备份，与 MDS 应用仓库的本地规范维护规则分开。包内不包含账号凭据、业务行数据、生产环境文件或完整项目运行状态。
+修改完成后执行：
 
-审核更新内容后，执行 `python scripts/validate_package.py --refresh-manifest` 更新文件摘要，再执行不带选项的校验，随后打包或同步到私有仓库。该选项只更新当前包的文件摘要；修改规范或依赖版本时还须更新清单中的来源摘要。校验不要求固定条款总数。Git 保留包内文件字节，便于不同机器核对摘要。
+```text
+python scripts/validate_package.py --refresh-manifest
+python scripts/validate_package.py
+```
+
+同步安装副本前比对差异并保留必要备份；第三方技能保留各自来源与许可。平台发现路径、主版本与同步方法见[维护说明](skills/personal-web-visual-design/references/maintenance.md)。
+
+个人规范与配套技能在私有仓库维护。普通网页任务按目标项目流程交付；维护本技能不自动改写业务项目或发布网页。

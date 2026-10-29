@@ -1,0 +1,4 @@
+interface:
+  display_name: "个人网页视觉设计"
+  short_description: "跨项目复用个人网页审美，统一配色、字体、留白、组件交互与数据展示"
+  default_prompt: "使用 $personal-web-visual-design，按我的个人视觉规范设计或改进当前网页，并核验实际效果。"
