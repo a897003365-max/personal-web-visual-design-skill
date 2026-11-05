@@ -58,4 +58,4 @@ python scripts/validate_package.py
 
 同步安装副本前比对差异并保留必要备份；第三方技能保留各自来源与许可。平台发现路径、主版本与同步方法见[维护说明](skills/personal-web-visual-design/references/maintenance.md)。
 
-个人规范与配套技能在私有仓库维护。普通网页任务按目标项目流程交付；维护本技能不自动改写业务项目或发布网页。
+个人规范与配套技能在本仓库维护。普通网页任务按目标项目流程交付；维护本技能不自动改写业务项目或发布网页。

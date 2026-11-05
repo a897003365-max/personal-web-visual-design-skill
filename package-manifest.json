@@ -1,11 +1,11 @@
 {
   "format": 1,
   "package": "personal-web-visual-design-skill",
-  "package_version": "2026.10.29.1",
-  "packaged_on": "2026-10-29",
+  "package_version": "2026.11.05.1",
+  "packaged_on": "2026-11-05",
   "entry_skill": "personal-web-visual-design",
   "repository_owner": "a897003365-max",
-  "repository_visibility": "private",
+  "repository_visibility": "public",
   "skills": [
     "anti-defensive-writing",
     "impeccable",
@@ -372,7 +372,7 @@
   "files": {
     ".gitattributes": "27d5f5bfec7787b5d515d1757d6cfb1cfd9eaa1e8b9b7e5b46979f45a25d95fd",
     ".gitignore": "66472199f17db2d6e403decfc9e6c1739bd6165a42c0216219db1a044c5ff1d8",
-    "README.md": "ec8988be226379a7b082ad4a8e02fb0d06031c13d47e4842f9172db83a85a5c9",
+    "README.md": "b7701f55e75d9c79108e977eeac4287313858dc8ec3bbbf5d764726ca3ba724a",
     "scripts/install.py": "96ccbb5c4d3251d7684cd8530c5321ecf37d1e57b335501727fdcbcf34412d2f",
     "scripts/validate_package.py": "526e5e1c3a991da1d32d715f7653fb2572f85698c1947b7db32a7517e99c9244",
     "skills/anti-defensive-writing/SKILL.md": "ef055917cc1407064cd0deaffd78264c251e8a27c30c112c54c64fb5ca46ef7a",
@@ -1281,12 +1281,12 @@
     "skills/personal-web-visual-design/assets/web-theme.css": "fddb484cea69125cb26032462c45a72f702c3b23d9f792f28ae2ef617e68134f",
     "skills/personal-web-visual-design/licenses/impeccable-LICENSE.txt": "02bb8c3b4e70190e3986c0404ad2fd8d639b4f534252d82379cc1b502b6d1812",
     "skills/personal-web-visual-design/references/assets.md": "b34f2e0e20dacc7c5d075735ec3a11c33c625b6217dd842e9ed6b7f20ed02391",
-    "skills/personal-web-visual-design/references/data-display.md": "955852aca6d34c76987157a2f8ba64080006ca7c1e34608249f91de5e35d0d2e",
+    "skills/personal-web-visual-design/references/data-display.md": "5192c167cca203defa83b69d964986f7469ee4cad478aed96baa110bb7c4d0c9",
     "skills/personal-web-visual-design/references/dependencies.md": "3e411102f14bdc7d34364b77705de0e9a75514a9afe19e1d2e7213a75fb7c729",
-    "skills/personal-web-visual-design/references/design-workflow.md": "236a757a2fdbceb9e8e6250520329f521942334cbf9da002be2dfdb7dfa0e726",
+    "skills/personal-web-visual-design/references/design-workflow.md": "2040c3e1b065031a1ac28d551a1299a257a0985bda2b51adf13d14a324e5bcfe",
     "skills/personal-web-visual-design/references/maintenance.md": "a639c7657292a978adb4ca59425b0770e7042538ecd372f18d599ed93f514536",
-    "skills/personal-web-visual-design/references/web-visual-standards.md": "a9c87a3925fae0e64d0a2cc2686f092ffa7e9eeb662d3c59e7531de1a3eda1f7",
-    "skills/personal-web-visual-design/SKILL.md": "680d66a26bc60d1e260b4848a61c2e48a0cbdfcf64a10dfdebc14bd2ebc5b7ea",
+    "skills/personal-web-visual-design/references/web-visual-standards.md": "be702efc6c5e94e03b25463f7242733dbb4f02a62e604cf6dced625f2d152b57",
+    "skills/personal-web-visual-design/SKILL.md": "e76405ced876388de0866433f2f420cf548a6c468bb7e91586d15b029f118a10",
     "THIRD_PARTY_NOTICES.md": "708e45582b949abf094766f73db85d60b1907f946b01740b2fd29162ea117db3"
   }
 }
